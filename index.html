@@ -12,26 +12,40 @@
         <title>Bootstrap Cheatsheet!</title>
     </head>
     <body>
-        <header class="navbar container-fluid bg-primary text-white">
-            <nav class="container-md flex-wrap flex-md-nowrap">
-                <a href="https://getbootstrap.com/" target="_blank" class="pe-3 text-white" style="font-size: 2rem;">
-                    <i class="bi bi-bootstrap"></i>
-                </a>
-                <div class="navbar-collapse">
-                    <div class="btn-group">
-                        <a class="btn btn-primary text-white" href="#home"><i class="bi bi-house-door pe-1"></i>Home</a>
-                        <a class="btn btn-primary text-white" href="#about"><i class="bi bi-person pe-1"></i>About</a>
-                        <a class="btn btn-primary text-white" href="#awesome"><i class="bi bi-emoji-sunglasses pe-1"></i>Awesome List</a>
-                    </div>
-                    <a class="btn btn-outline-warning" style="float: right;" href="https://github.com/guleixibian2009/awesome-bs5/" target="_blank">
-                        <i class="bi bi-github"></i>
-                        <strong>Fork me on GitHub!</strong>
+        <header class="container-fluid bg-primary text-white">
+            <nav class="navbar navbar-expand-md">
+                <div class="container-md">
+                    <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
+                        <i class="bi bi-bootstrap text-white p-1" style="font-size: 1.5em;"></i>
                     </a>
+                    <button class="navbar-toggler float-md-end" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                        <i class="bi bi-list"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nav">
+                        <ul class="navbar-nav container-fluid">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#home"><i class="bi bi-house-door pe-1"></i>Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="#about"><i class="bi bi-person pe-1"></i>About</a>
+                            </li>
+                            <li class="nav-item me-md-auto">
+                                <a class="nav-link text-white" href="#awesome"><i class="bi bi-emoji-sunglasses pe-1"></i>Awesome List</a>
+                            </li>
+                            <hr class="d-md-none text-white" />
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="https://guleixibian2009.github.io/" target="_blank"><i class="bi bi-globe pe-1"></i>My website</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-warning" href="https://github.com/guleixibian2009/awesome-bs5/" target="_blank"><i class="bi bi-github pe-1"></i><strong>Fork me on GitHub!</strong></a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </header>
 
-        <div class="container-md pt-5">
+        <div class="container-md mt-3">
             <h1 class="display-4" id="home">Welcome to the Bootstrap5 Awesome List!</h1>
         </div>
 
