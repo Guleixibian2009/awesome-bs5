@@ -1,2 +1,2 @@
 # BS5-CheatSheet
-Another website of mine, and a cheatsheet of Bootstrap5 for ya!
+Another website of mine, and an awesome list of Bootstrap5 for ya!
