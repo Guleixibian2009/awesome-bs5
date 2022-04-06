@@ -9,6 +9,10 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet">
 
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2/jquery.scrollTo.min.js"></script>
+        <script src="../awesome-bs5/assets/TOC.js"></script>
+
         <title>Bootstrap Cheatsheet!</title>
     </head>
     <body>
@@ -45,9 +49,22 @@
             </nav>
         </header>
 
-        <div class="container-md mt-3">
-            <h1 class="display-4" id="home">Welcome to the Bootstrap5 Awesome List!</h1>
-        </div>
+        <main class="row m-1 px-1 m-md-5 px-md-5 container-md-fluid">
+            <nav class="position-sticky col-md-3 d-none d-md-block" id="TOC">
+                <!-- Table Of Contents goes here -->
+            </nav>
+            <div class="col-md-9" id="Main">
+                <p class="display-5" id="home">Welcome to the <code>Awesome-BS5</code> project!</p>
+                <p class="lead fw-normal mt-2">So hi there! This is the <code>Bootstrap5</code> Awesome List by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a>. Here you can...</p> 
+                <ul class="ps-5">
+                    <li>...have a look around the significant effects generated(actually hand-written) by <code>Bootstrap</code>, the most popular front-end open source toolkit in the world.</li>
+                    <li>...try the utilities online with full demonstration. Just feel free!</li>
+                    <li>...apply the great functions to your site. I'll show ya the full code!</li>
+                </ul>
+                <h2>About the Author</h2>
+                <h2>Now, the <code>Awesome List</code>!</h2>
+            </div>
+        </main>
 
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
