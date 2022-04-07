@@ -17,12 +17,12 @@
     </head>
     <body>
         <header class="container-fluid bg-primary text-white" style="z-index: 10000;">
-            <nav class="navbar navbar-expand-md">
-                <div class="container-md">
+            <nav class="navbar navbar-expand-xl">
+                <div class="container-xl">
                     <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
                         <i class="bi bi-bootstrap text-white p-1" style="font-size: 1.5em;"></i>
                     </a>
-                    <button class="navbar-toggler float-md-end" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+                    <button class="navbar-toggler float-xl-end" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
                         <i class="bi bi-list"></i>
                     </button>
                     <div class="collapse navbar-collapse" id="nav">
@@ -33,15 +33,15 @@
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="#About the Author"><i class="bi bi-person pe-1"></i>About</a>
                             </li>
-                            <li class="nav-item me-md-auto">
+                            <li class="nav-item me-xl-auto">
                                 <a class="nav-link text-white" href="#Now, the Awesome List!"><i class="bi bi-emoji-sunglasses pe-1"></i>Awesome List</a>
                             </li>
-                            <hr class="d-md-none text-white" />
+                            <hr class="d-xl-none text-white" />
                             <li class="nav-item">
                                 <a class="nav-link text-white" href="https://guleixibian2009.github.io/" target="_blank"><i class="bi bi-globe pe-1"></i>My website</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-warning" href="https://github.com/guleixibian2009/awesome-bs5/" target="_blank"><i class="bi bi-github pe-1"></i><strong>Fork me on GitHub!</strong></a>
+                                <a class="nav-link text-warning" href="https://github.com/guleixibian2009/awesome-bs5/" target="_blank"><i class="bi bi-github pe-1"></i><strong>Fork this repo on GitHub!</strong></a>
                             </li>
                         </ul>
                     </div>
@@ -49,11 +49,11 @@
             </nav>
         </header>
 
-        <main class="d-md-flex flex-md-row align-items-stretch mx-1 mx-md-5 px-1 px-md-3 container-md-fluid">
-            <nav class="d-none d-md-block bg-light border-end border-light shadow-lg px-3 py-4 order-1" style="width: 325.33px !important;" id="TOC">
+        <main class="d-xl-flex flex-xl-row align-items-stretch mx-1 mx-xl-5 px-1 px-xl-3 container-xl-fluid">
+            <nav class="d-none d-xl-block border-end border-light shadow-lg px-4 py-4 order-1 col-xl-2" id="TOC">
                 <!-- Table Of Contents goes here -->
             </nav>
-            <div class="p-4 flex-grow-1 order-2" id="Main">
+            <div class="p-4 order-2 col-xl-10" id="Main">
                 <section id="intro">
                     <p class="display-5" id="home">Welcome to the <code>Awesome-BS5</code> project!</p>
                     <p class="lead fw-normal mt-2">So hi there! This is the <code>Bootstrap5</code> Awesome List by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a>. Here you can...</p> 
@@ -63,8 +63,27 @@
                         <li>...apply the great functions to your site. I'll show ya the full code!</li>
                     </ul>
                 </section>
-                <section id="author">
+                <section id="author" class="pb-1 mb-4">
                     <h2 id="about">About the Author</h2>
+                    <div class="card ms-5 rounded-2">
+                        <div class="card-header">
+                            <p class="lead mb-0">About me</p>
+                        </div>
+                        <div class="card-body p-0 d-flex flex-row">
+                            <img src="assets/images/Avatar.png" height="200" class="d-none d-lg-block" />
+                            <div class="p-4 pb-xl-0">
+                                <ul>
+                                    <li class="h5">👋 Hi, I'm Guleixibian2009<small class="text-muted">(故垒西边2009)</small></li>
+                                    <li class="h5">👀 I’m interested in Python and website building.</li>
+                                    <li class="h5">📫 How to reach me: <small><a href="mailto:guleixibian2009@outlook.com">guleixibian2009@outlook.com</a></small></li>
+                                </ul>
+                                <a class="btn btn-outline-primary btn-sm ms-3 mb-2" href="https://github.com/guleixibian2009/" target="_blank">Visit me on GitHub!</a>
+                                <a class="btn btn-outline-success btn-sm ms-3 mb-2" href="https://guleixibian2009.github.io/" target="_blank">Have a look at my website!</a>
+                                <a class="btn btn-outline-warning btn-sm ms-3 mb-2" href="https://guleixibian2009.github.io/Hand-Written-HTML-Site/" target="_blank">Wanna see my <code>Hand-Written-HTML-Site</code>?</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
                 </section>
                 <section id="awesome list">
                     <h2 id="awesome">Now, the <code>Awesome List</code>!</h2>
@@ -73,7 +92,7 @@
         </main>
 
         <footer class="container-fluid py-3 border-top bg-dark">
-            <div class="container-md">
+            <div class="container-xl">
                 <div>
                     <span class="text-muted">&copy;2022 Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a></span>
                 </div>
