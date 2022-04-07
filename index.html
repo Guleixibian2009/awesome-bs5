@@ -13,10 +13,10 @@
         <script src="https://cdn.jsdelivr.net/npm/jquery.scrollto@2/jquery.scrollTo.min.js"></script>
         <script src="../awesome-bs5/assets/TOC.js"></script>
 
-        <title>Bootstrap Cheatsheet!</title>
+        <title>Awesome-BS5</title>
     </head>
     <body>
-        <header class="container-fluid bg-primary text-white fixed-top">
+        <header class="container-fluid bg-primary text-white" style="z-index: 10000;">
             <nav class="navbar navbar-expand-md">
                 <div class="container-md">
                     <a class="navbar-brand" href="https://getbootstrap.com/" target="_blank">
@@ -31,10 +31,10 @@
                                 <a class="nav-link text-white" href="#home"><i class="bi bi-house-door pe-1"></i>Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white" href="#about"><i class="bi bi-person pe-1"></i>About</a>
+                                <a class="nav-link text-white" href="#About the Author"><i class="bi bi-person pe-1"></i>About</a>
                             </li>
                             <li class="nav-item me-md-auto">
-                                <a class="nav-link text-white" href="#awesome"><i class="bi bi-emoji-sunglasses pe-1"></i>Awesome List</a>
+                                <a class="nav-link text-white" href="#Now, the Awesome List!"><i class="bi bi-emoji-sunglasses pe-1"></i>Awesome List</a>
                             </li>
                             <hr class="d-md-none text-white" />
                             <li class="nav-item">
@@ -49,24 +49,30 @@
             </nav>
         </header>
 
-        <main class="row mx-1 mx-md-5 px-1 px-md-5 container-md-fluid overflow-visible" style="margin-top: 91px; margin-bottom: 77px;">
-            <nav class="position-sticky top-0 col-md-3 d-none d-md-block" id="TOC">
+        <main class="d-md-flex flex-md-row align-items-stretch mx-1 mx-md-5 px-1 px-md-3 container-md-fluid">
+            <nav class="d-none d-md-block bg-light border-end border-light shadow-lg px-3 py-4 order-1" style="width: 325.33px !important;" id="TOC">
                 <!-- Table Of Contents goes here -->
             </nav>
-            <div class="col-md-9" id="Main">
-                <p class="display-5" id="home">Welcome to the <code>Awesome-BS5</code> project!</p>
-                <p class="lead fw-normal mt-2">So hi there! This is the <code>Bootstrap5</code> Awesome List by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a>. Here you can...</p> 
-                <ul class="ps-5">
-                    <li>...have a look around the significant effects generated(actually hand-written) by <code>Bootstrap</code>, the most popular front-end open source toolkit in the world.</li>
-                    <li>...try the utilities online with full demonstration. Just feel free!</li>
-                    <li>...apply the great functions to your site. I'll show ya the full code!</li>
-                </ul>
-                <h2>About the Author</h2>
-                <h2>Now, the <code>Awesome List</code>!</h2>
+            <div class="p-4 flex-grow-1 order-2" id="Main">
+                <section id="intro">
+                    <p class="display-5" id="home">Welcome to the <code>Awesome-BS5</code> project!</p>
+                    <p class="lead fw-normal mt-2">So hi there! This is the <code>Bootstrap5</code> Awesome List by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a>. Here you can...</p> 
+                    <ul class="ps-5">
+                        <li>...have a look around the significant effects generated(actually hand-written) by <code>Bootstrap</code>, the most popular front-end open source toolkit in the world.</li>
+                        <li>...try the utilities online with full demonstration. Just feel free!</li>
+                        <li>...apply the great functions to your site. I'll show ya the full code!</li>
+                    </ul>
+                </section>
+                <section id="author">
+                    <h2 id="about">About the Author</h2>
+                </section>
+                <section id="awesome list">
+                    <h2 id="awesome">Now, the <code>Awesome List</code>!</h2>
+                </section>
             </div>
         </main>
 
-        <footer class="container-fluid py-3 border-top fixed-bottom bg-dark">
+        <footer class="container-fluid py-3 border-top bg-dark">
             <div class="container-md">
                 <div>
                     <span class="text-muted">&copy;2022 Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/guleixibian2009/" target="_blank">@Guleixibian2009</a></span>
