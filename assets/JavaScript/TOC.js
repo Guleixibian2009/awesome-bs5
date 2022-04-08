@@ -59,10 +59,10 @@ $(document).ready(function(){
         var heading = document.getElementById(raw);
         var headingY = heading.offsetTop;
         //Use jQuery.scrollTo to create a linear animation
-        $.scrollTo(headingY-40,800);
+        $.scrollTo(headingY-40,200);
     });
 
     $("nav#TOC h3").click(function(){
-        $.scrollTo(0,800);
+        $.scrollTo(0,200);
     });
 });
