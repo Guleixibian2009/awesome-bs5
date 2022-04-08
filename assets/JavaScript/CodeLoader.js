@@ -1,3 +1,4 @@
+//Code Loader
 "use strict";
 $(document).ready(function(){
     const CodeBlocks = Array(document.getElementsByClassName("code-load"));
@@ -7,11 +8,24 @@ $(document).ready(function(){
             var codeReq = new XMLHttpRequest();
             codeReq.onload = function(){
                 var code = this.responseText;
-                console.log(code);
                 $(codeBlock).html(code);
             };
             codeReq.open("GET",`codeExamples/${codeLink}.xml`);
             codeReq.send();
         });
+    }
+});
+
+//iframe height helper
+$(document).ready(function(){
+    const iframe = document.getElementsByTagName("iframe");
+    if (iframe != null){
+        for (let i = 0; i < iframe.length; i++) {
+            const el = iframe[i];
+            var height = el.contentDocument.body.scrollHeight;
+            if (typeof height == 'number'){
+                el.height = height;
+            }
+        }
     }
 });
