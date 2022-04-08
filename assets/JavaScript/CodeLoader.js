@@ -22,10 +22,8 @@ $(document).ready(function(){
     if (iframe != null){
         for (let i = 0; i < iframe.length; i++) {
             const el = iframe[i];
-            var height = el.contentDocument.body.scrollHeight;
-            if (typeof height == 'number'){
-                el.height = height;
-            }
+            var height = el.contentDocument.documentElement.offsetHeight;
+            el.height = height
         }
     }
 });
