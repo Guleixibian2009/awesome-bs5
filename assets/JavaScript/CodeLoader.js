@@ -22,8 +22,10 @@ $(document).ready(function(){
     if (iframe != null){
         for (let i = 0; i < iframe.length; i++) {
             const el = iframe[i];
-            var height = el.contentDocument.documentElement.offsetHeight;
-            el.height = height
+            $(el).ready(function(){
+                var height = el.contentDocument.documentElement.offsetHeight;
+                el.height = `${height}`;
+            }); 
         }
     }
 });
