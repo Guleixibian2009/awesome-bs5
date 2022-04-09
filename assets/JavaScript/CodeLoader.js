@@ -6,9 +6,13 @@ $(document).ready(function(){
         CodeBlocks.forEach(codeBlock => {
             var codeLink = $(codeBlock).attr("data-code-link");
             var codeReq = new XMLHttpRequest();
-            codeReq.onload = function(){
-                var code = this.responseText;
-                $(codeBlock).html(code);
+            codeReq.onloadend = function(){
+                var responseText = this.responseText;
+                var parser = new DOMParser();
+                var codeExample = parser.parseFromString(responseText,"text/xml");
+                var code = codeExample.getElementsByTagName("codeExample")[0].innerHTML;
+                $(codeBlock).find("code").html(code);
+                setTimeout(Prism.highlightAll(), 100)
             };
             codeReq.open("GET",`codeExamples/${codeLink}.xml`);
             codeReq.send();
