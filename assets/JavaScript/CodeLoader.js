@@ -22,14 +22,21 @@ $(document).ready(function(){
 
 //iframe height helper
 $(document).ready(function(){
-    const iframe = document.getElementsByTagName("iframe");
-    if (iframe != null){
-        for (let i = 0; i < iframe.length; i++) {
-            const el = iframe[i];
-            $(el).ready(function(){
-                var height = el.contentDocument.documentElement.offsetHeight;
-                el.height = `${height}`;
-            }); 
+    function SetHeight(){
+        const iframe = document.getElementsByTagName("iframe");
+        if (iframe != null){
+            for (let i = 0; i < iframe.length; i++) {
+                const el = iframe[i];
+                $(el).ready(function(){
+                    var height = el.contentDocument.documentElement.offsetHeight;
+                    el.height = `${height}`;
+                }); 
+            }
         }
     }
+    SetHeight();
+
+    $(window).resize(function(){
+        SetHeight();
+    });
 });
