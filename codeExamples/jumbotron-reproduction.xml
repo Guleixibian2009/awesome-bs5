@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Tip:replace &lt; with &lt; and & with &amp; -->
+<codeExample>&lt;div class="p-4 bg-light">
+    &lt;div class="bg-primary text-white p-4 rounded-3 shadow">
+        &lt;p class="h3">Hello, World!&lt;/p>
+        &lt;p class="lead">This is a reproduction of &lt;code class="text-warning">Bootstrap Jumbotron&lt;/code>.&lt;/p>
+        &lt;p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repellat mollitia unde similique nemo, sequi iusto ad impedit magni et at, alias maiores nulla voluptatibus laboriosam. Atque tenetur sed non.&lt;/p>
+        &lt;button class="btn btn-success me-3">Learn more&lt;/button>&lt;button class="btn btn-outline-warning">Another Example Button&lt;/button>
+    &lt;/div>
+&lt;/div>
+</codeExample>

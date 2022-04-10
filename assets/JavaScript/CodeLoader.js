@@ -1,22 +1,23 @@
 //Code Loader
 "use strict";
 $(document).ready(function(){
-    const CodeBlocks = Array(document.getElementsByClassName("code-load"));
+    const CodeBlocks = document.getElementsByClassName("code-load");
     if (CodeBlocks != null){
-        CodeBlocks.forEach(codeBlock => {
-            var codeLink = $(codeBlock).attr("data-code-link");
+        for (let i = 0; i < CodeBlocks.length; i++) {
+            const element = CodeBlocks[i];
+            var codeLink = $(element).attr("data-code-link");
             var codeReq = new XMLHttpRequest();
             codeReq.onloadend = function(){
                 var responseText = this.responseText;
                 var parser = new DOMParser();
                 var codeExample = parser.parseFromString(responseText,"text/xml");
                 var code = codeExample.getElementsByTagName("codeExample")[0].innerHTML;
-                $(codeBlock).find("code").html(code);
+                $(element).find("code").html(code);
                 setTimeout(Prism.highlightAll(), 100)
             };
             codeReq.open("GET",`codeExamples/${codeLink}.xml`);
             codeReq.send();
-        });
+        }
     }
 });
 
