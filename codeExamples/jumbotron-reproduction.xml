@@ -5,8 +5,7 @@
     <p class="h3">Hello, World!</p>
     <!-- Class lead to make it look different from normal <p>s -->
     <p class="lead">This is a reproduction of <code class="text-warning">Bootstrap Jumbotron</code>.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex repellat mollitia unde similique nemo, 
-    sequi iusto ad impedit magni et at, alias maiores nulla voluptatibus laboriosam. Atque tenetur sed non.</p>
+    <p>Lorem ipsum...</p>
     <button class="btn btn-success me-3">Learn more</button>
     <button class="btn btn-outline-warning">Another Example Button</button>
 </div>
