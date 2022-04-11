@@ -1,48 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Tip:replace < with &lt; and & with &amp; -->
-<codeExample>&lt;!-- Class table-responsive to create a scroll bar when too narrow -->
-&lt;div class="table-responsive">
-    &lt;!-- Class table for a table display/table-hover for stripes -->
-    &lt;table class="table table-hover">
-        &lt;thead>
-            &lt;tr>
-                &lt;th>Color Name&lt;/th>
-                &lt;th>Color Code(&lt;code>hex&lt;/code>)&lt;/th>
-                &lt;th>Color Code when &lt;code>hover&lt;/code>(&lt;code>hex&lt;/code>)&lt;/th>
-            &lt;/tr>
-        &lt;/thead>
-        &lt;tbody>
-            &lt;tr>
-                &lt;td>Default&lt;/td>&lt;!-- Nothing happens here~ -->
-                &lt;td>&lt;code>#ffffff&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#ececec&lt;/code>&lt;/td>
-            &lt;/tr>      
-            &lt;tr class="table-primary">&lt;!-- This is very important -->
-                &lt;td>Primary&lt;/td>
-                &lt;td>&lt;code>#cfe2ff&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#bfd1ec&lt;/code>&lt;/td>
-            &lt;/tr>
-            &lt;tr class="table-success">&lt;!-- Green means Go! -->
-                &lt;td>Success&lt;/td>
-                &lt;td>&lt;code>#d1e7dd&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#c1d6cc&lt;/code>&lt;/td>
-            &lt;/tr>
-            &lt;tr class="table-danger">&lt;!-- Uh oh, something unexpected -->
-                &lt;td>Danger&lt;/td>
-                &lt;td>&lt;code>#f8d7da&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#e5c7ca&lt;/code>&lt;/td>
-            &lt;/tr>
-            &lt;tr class="table-info">&lt;!-- Noticed this? -->
-                &lt;td>Info&lt;/td>
-                &lt;td>&lt;code>#cff4fc&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#bfe2e9&lt;/code>&lt;/td>
-            &lt;/tr>
-            &lt;tr class="table-warning">&lt;!-- Something wrong but not that important. -->
-                &lt;td>Warning&lt;/td>
-                &lt;td>&lt;code>#fff3cd&lt;/code>&lt;/td>
-                &lt;td>&lt;code>#ece1be&lt;/code>&lt;/td>
-            &lt;/tr>
-        &lt;/tbody>
-    &lt;/table>
-&lt;/div>
+<codeExample><!-- Class table-responsive to create a scroll bar when too narrow -->
+<div class="table-responsive">
+    <!-- Class table for a table display/table-hover for stripes -->
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>Color Name</th>
+                <th>Color Code(<code>hex</code>)</th>
+                <th>Color Code when <code>hover</code>(<code>hex</code>)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Default</td><!-- Nothing happens here~ -->
+                <td><code>#ffffff</code></td>
+                <td><code>#ececec</code></td>
+            </tr>      
+            <tr class="table-primary"><!-- This is very important -->
+                <td>Primary</td>
+                <td><code>#cfe2ff</code></td>
+                <td><code>#bfd1ec</code></td>
+            </tr>
+            <tr class="table-success"><!-- Green means Go! -->
+                <td>Success</td>
+                <td><code>#d1e7dd</code></td>
+                <td><code>#c1d6cc</code></td>
+            </tr>
+            <tr class="table-danger"><!-- Uh oh, something unexpected -->
+                <td>Danger</td>
+                <td><code>#f8d7da</code></td>
+                <td><code>#e5c7ca</code></td>
+            </tr>
+            <tr class="table-info"><!-- Noticed this? -->
+                <td>Info</td>
+                <td><code>#cff4fc</code></td>
+                <td><code>#bfe2e9</code></td>
+            </tr>
+            <tr class="table-warning"><!-- Something wrong but not that important. -->
+                <td>Warning</td>
+                <td><code>#fff3cd</code></td>
+                <td><code>#ece1be</code></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 </codeExample>
