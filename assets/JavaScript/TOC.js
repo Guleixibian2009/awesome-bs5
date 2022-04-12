@@ -12,7 +12,7 @@ $(document).ready(function(){
         }
     }
     //Next turn them into <li> and give them correct classes
-    var OutputList = `<div class="sticky-top pt-2"><div class="heading d-grid" style="place-content: center !important;"><h3 class="lead">Table Of Contents</h3></div><ul id="TOC" class="list-unstyled">`
+    var OutputList = `<div class="sticky-top pt-2"><div class="heading d-grid" style="place-content: center !important;"><p class="h3 lead">Table Of Contents</p></div><ul id="TOC" class="list-unstyled">`
     HeadingList.forEach(el => {
         if (el.nodeName == "H2"){
             var outputClass = "ps-2";

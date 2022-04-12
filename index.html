@@ -18,10 +18,12 @@
 
         <!-- PrismJS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/themes/prism.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/toolbar/prism-toolbar.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.css">
 
         <title>Awesome-BS5</title>
     </head>
-    <body>
+    <body class="line-numbers"><!-- For PrismJS -->
         <header class="container-fluid bg-primary text-white" style="z-index: 10000;">
             <nav class="navbar navbar-expand-xl">
                 <div class="container-xl">
@@ -190,10 +192,47 @@
                 </div>
             </div>
         </footer>
+
+        <style>
+            /*The counters*/
+            main{
+                counter-reset: heading;
+            }
+            h2::before{
+                counter-increment: heading;
+                content: counter(heading) ". ";
+                color: rgb(var(--bs-secondary-rgb));
+            }
+            h2{
+                counter-reset: subheading;
+                position: sticky;
+            }
+            h3::before{
+                counter-increment: subheading;
+                content: counter(heading) "." counter(subheading) " ";
+                color: rgb(var(--bs-secondary-rgb));
+            }
+            h3{
+                counter-reset: subsubheading;
+                position: sticky;
+            }
+            h4::before{
+                counter-increment: subsubheading;
+                content: counter(heading) "." counter(subheading) "." counter(subsubheading) " ";
+                color: rgb(var(--bs-secondary-rgb));
+            }
+            h4{
+                position: sticky;
+            }
+        </style>
+
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1/prism.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/toolbar/prism-toolbar.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/autoloader/prism-autoloader.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/line-numbers/prism-line-numbers.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/prismjs@1/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
     </body>
 </html>
