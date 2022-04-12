@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<codeExample><div class="container-fluid">
+<div class="d-flex flex-row flex-fill w-100">
+    <div class="container col-6 d-flex flex-row">
+        <div class="dropdown ms-auto">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown menu</button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item">Link1</a></li>
+                <li><a class="dropdown-item">Link2</a></li>
+                <li><a class="dropdown-item">Link3</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="container col-6">
+        <div class="dropdown">
+            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown menu#2</button>
+            <ul class="dropdown-menu dropdown-menu-end">
+                <li><a class="dropdown-item">Link1</a></li>
+                <li><a class="dropdown-item active">Active Link2</a></li>
+                <li><a class="dropdown-item disabled">Disabled Link3</a></li>
+                <li><p class="px-3 mb-0">Text inside dropdown here...</p></li>
+            </ul>
+        </div>
+    </div>
+</div>
+</div>
+</codeExample>

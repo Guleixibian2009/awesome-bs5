@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+        <title>Dropdown Menus Basic</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="d-flex flex-row flex-fill w-100">
+                <div class="container col-6 d-flex flex-row">
+                    <div class="dropdown ms-auto">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown menu</button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item">Link1</a></li>
+                            <li><a class="dropdown-item">Link2</a></li>
+                            <li><a class="dropdown-item">Link3</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container col-6">
+                    <div class="dropdown">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown menu#2</button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item">Link1</a></li>
+                            <li><a class="dropdown-item active">Active Link2</a></li>
+                            <li><a class="dropdown-item disabled">Disabled Link3</a></li>
+                            <li><p class="px-3 mb-0">Text inside dropdown here...</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

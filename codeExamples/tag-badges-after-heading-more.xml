@@ -1,11 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codeExample><p class="mb-1">Some colorful colors!</p>
-<p class="display-5">Example Display 5 <span class="badge bg-primary me-2">#tag1</span><span class="badge bg-success">#tag2</span></p>
-<p class="display-6">Example Display 6 <span class="badge bg-warning me-2">#tag1</span><span class="badge bg-danger">#tag2</span></p>
+<p class="display-5">Example Display 5 
+    <!-- Those <span>s are badges! -->
+    <span class="badge bg-primary me-2">#tag1</span>
+    <span class="badge bg-success">#tag2</span>
+</p>
+<p class="display-6">Example Display 6 
+    <!-- Class me-2 for margin-end -->
+    <span class="badge bg-warning me-2">#tag1</span>
+    <span class="badge bg-danger">#tag2</span>
+</p>
+<!-- A grey, grey line -->
 <hr class="text-muted" />
 <p class="mb-1">Hey, why is this rounded?</p>
-<p class="h4">Example Heading 4 <span class="badge rounded-pill bg-success me-2">#pills</span><span class="badge rounded-pill bg-dark">#rounded</span></p>
+<p class="h4">Example Heading 4 
+    <!-- Class rounded-pill for pill effects -->
+    <span class="badge rounded-pill bg-success me-2">#pills</span>
+    <span class="badge rounded-pill bg-dark">#rounded</span>
+</p>
 <hr class="text-muted" />
 <p class="mb-1">Let's combine them!</p>
-<span style="font-size: 1.25rem !important;" class="badge bg-primary p-2 mt-0"><span class="bi bi-inbox-fill me-1"></span>Inbox<span class="badge rounded-pill bg-danger ms-1">14</span></span>
+<span style="font-size: 1.25rem !important;" class="badge bg-primary p-2 mt-0">
+    <!-- This is a Bootstrap icon of Inbox -->
+    <span class="bi bi-inbox-fill me-1"></span>Inbox
+    <span class="badge rounded-pill bg-danger ms-1">14</span>
+</span>
 </codeExample>
