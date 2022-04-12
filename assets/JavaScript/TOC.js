@@ -16,19 +16,20 @@ $(document).ready(function(){
     var heading=0, subheading=0, subsubheading=0;
     HeadingList.forEach(el => {
         if (el.nodeName == "H2"){
-            heading+=1
-            var outputNum = `${heading}. `
+            heading+=1;
+            var outputNum = `${heading}. `;
             var outputClass = "ps-2";
             el.id = $(el).text();
         }
         else if (el.nodeName == "H3"){
-            subheading+=1
-            var outputNum = `${heading}.${subheading} `
+            subheading+=1;
+            subsubheading = 0;
+            var outputNum = `${heading}.${subheading} `;
             var outputClass = "ps-3";
             el.id = $(el).text();
         } else if (el.nodeName == "H4"){
-            subsubheading+=1
-            var outputNum = `${heading}.${subheading}.${subsubheading} `
+            subsubheading+=1;
+            var outputNum = `${heading}.${subheading}.${subsubheading} `;
             var outputClass = "ps-4";
             el.id = $(el).text();
         }
@@ -63,7 +64,6 @@ $(document).ready(function(){
     //When clicked, get the id and it's YOffSet
     $("nav#TOC li").click(function(){
         var raw = $(this).text().replace(/\d.\d.\d\s/,"").replace(/\d.\d\s/,"").replace(/\d.\s/,"");
-        console.log(raw);
         var heading = document.getElementById(raw);
         var headingY = heading.offsetTop;
         //Use jQuery.scrollTo to create a linear animation

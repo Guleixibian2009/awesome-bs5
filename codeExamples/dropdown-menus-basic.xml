@@ -18,7 +18,7 @@
                 <li><a class="dropdown-item">Link1</a></li>
                 <li><a class="dropdown-item active">Active Link2</a></li>
                 <li><a class="dropdown-item disabled">Disabled Link3</a></li>
-                <li><p class="px-3 mb-0">Text inside dropdown here...</p></li>
+                <li><span class="dropdown-item-text">Text inside dropdown here...</span></li>
             </ul>
         </div>
     </div>
