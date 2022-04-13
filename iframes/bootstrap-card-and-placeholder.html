@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+        <title>Bootstrap Cards and Placeholder</title>
+    </head>
+    <body>
+        <div class="container-fluid d-flex flex-row p-0 pe-3">
+            <div class="col-9 me-3 card text-center">
+                <div class="card-header">
+                    <span>New message</span>
+                </div>
+                <div class="card-body">
+                    <p class="h5 card-title">Special treatment for you!</p>
+                    <span class="card-text border border-3 bg-light d-grid mb-3" style="place-content: center !important; height: 150px;">Some example ads here...</span>
+                    <a class="btn btn-success">Go somewhere</a>
+                    <a class="btn btn-outline-danger">Dismiss!</a>
+                </div>
+                <div class="card-footer">
+                    <p class="mb-0 text-muted">3 mins ago</p>
+                </div>
+            </div>
+            <div class="col-3 card">
+                <div class="bg-secondary w-100 d-grid" style="height: 150px; place-content: center;">
+                    <span class="text-white">Placeholder Example</span>
+                </div>
+              
+                <div class="card-body">
+                    <h5 class="card-title placeholder-glow">
+                        <span class="placeholder col-6"></span>
+                    </h5>
+                    <p class="placeholder-glow mb-1 me-2 d-inline">
+                        <span class="card-text placeholder col-7"></span>
+                    </p>
+                    <p class="placeholder-glow mb-1 me-2 d-inline">
+                        <span class="card-text placeholder col-4"></span>
+                    </p>
+                    <p class="placeholder-glow mb-1 me-2 d-inline">
+                        <span class="card-text placeholder col-4"></span>
+                    </p>
+                    <p class="placeholder-glow mb-1 me-2 d-inline">
+                        <span class="card-text placeholder col-6"></span>
+                    </p>
+                    <p class="placeholder-glow mb-3 me-2 d-block">
+                        <span class="card-text placeholder col-8"></span>
+                    </p>
+                    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
