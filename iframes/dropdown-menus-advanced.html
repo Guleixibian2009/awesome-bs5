@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+        <title>Dropdown menus advanced</title>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="d-flex flex-row flex-fill w-100 align-items-end">
+                <div class="container col-4 d-flex flex-row">
+                    <div class="dropdown ms-auto">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dropdown aligned left!</button>
+                        <ul class="dropdown-menu dropdown-menu-start">
+                            <li><a class="dropdown-item">Link1</a></li>
+                            <li><a class="dropdown-item">Link2</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><a class="dropdown-item">Link below a divider</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container col-4 d-flex flex-row">
+                    <div class="dropdown dropend m-auto">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Want some headings?</button>
+                        <ul class="dropdown-menu">
+                            <li><span class="dropdown-header">heading 1</span></li>
+                            <li><a class="dropdown-item">Link1</a></li>
+                            <li><a class="dropdown-item">Link2</a></li>
+                            <li><a class="dropdown-item">Link3</a></li>
+                            <li><span class="dropdown-header">heading 2</span></li>
+                            <li><a class="dropdown-item-text"  style="cursor: pointer;">Another link</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container col-4 d-flex flex-row">
+                    <div class="dropup me-auto">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Dark dropup menus!</button>
+                        <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+                            <li><span class="dropdown-header">Item Status</span></li>
+                            <li><a class="dropdown-item">Link1</a></li>
+                            <li><a class="dropdown-item active">Active Link2</a></li>
+                            <li><a class="dropdown-item disabled">Disabled Link3</a></li>
+                            <li><hr class="dropdown-divider"/></li>
+                            <li><span class="dropdown-header">Text like items</span></li>
+                            <li><span class="dropdown-item-text">Text here!</span></li>
+                            <li><a class="dropdown-item-text" style="cursor: pointer;">Need a link?</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -1,27 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <codeExample><div class="container-fluid">
-<div class="d-flex flex-row flex-fill w-100">
-    <div class="container col-6 d-flex flex-row">
-        <div class="dropdown ms-auto">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown menu</button>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item">Link1</a></li>
-                <li><a class="dropdown-item">Link2</a></li>
-                <li><a class="dropdown-item">Link3</a></li>
-            </ul>
+    <div class="d-flex flex-row flex-fill w-100">
+        <div class="container col-6 d-flex flex-row">
+            <!-- Class dropdown to make it a dropdown menu -->
+            <div class="dropdown ms-auto">
+                <!-- A button to control the menu. Must have class dropdown-toggle and "data-bs-toggle='dropdown'" -->
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown menu</button>
+                <!-- Class dropdown-menu to make this <ul> a menu list -->
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item">Link1</a></li>
+                    <li><a class="dropdown-item">Link2</a></li>
+                    <li><a class="dropdown-item">Link3</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container col-6">
+            <div class="dropdown">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown menu#2</button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item">Link1</a></li>
+                    <!-- Class active to make it seem like being clicked -->
+                    <li><a class="dropdown-item active">Active Link2</a></li>
+                    <!-- Class active to make it unable to click -->
+                    <li><a class="dropdown-item disabled">Disabled Link3</a></li>
+                    <!-- <li> with class dropdown-item-text will not be changed into a clickable item(but able to be selected) -->
+                    <li><span class="dropdown-item-text">Text inside dropdown here...</span></li>
+                </ul>
+            </div>
         </div>
     </div>
-    <div class="container col-6">
-        <div class="dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown menu#2</button>
-            <ul class="dropdown-menu dropdown-menu-end">
-                <li><a class="dropdown-item">Link1</a></li>
-                <li><a class="dropdown-item active">Active Link2</a></li>
-                <li><a class="dropdown-item disabled">Disabled Link3</a></li>
-                <li><span class="dropdown-item-text">Text inside dropdown here...</span></li>
-            </ul>
-        </div>
-    </div>
-</div>
 </div>
 </codeExample>

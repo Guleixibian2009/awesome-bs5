@@ -33,7 +33,7 @@ $(document).ready(function(){
             var outputClass = "ps-4";
             el.id = $(el).text();
         }
-        var output = `<li class="${outputClass}"><button class="text-secondary btn btn-sm btn-outline-light p-1 border-0 rounded">${outputNum}${el.innerHTML}</button></li>`
+        var output = `<li class="${outputClass}"><button class="text-secondary btn btn-sm btn-outline-light p-1 border-0 rounded text-start">${outputNum}${el.innerHTML}</button></li>`
         OutputList = OutputList + output;
     });
     OutputList = OutputList + `</ul></div>`;
@@ -70,7 +70,7 @@ $(document).ready(function(){
         $.scrollTo(headingY-40,200);
     });
 
-    $("nav#TOC h3").click(function(){
+    $("nav#TOC p.h3").click(function(){
         $.scrollTo(0,200);
     });
 });
