@@ -11,49 +11,102 @@
         <title>Bootstrap Cards and Placeholder</title>
     </head>
     <body>
-        <div class="container-fluid d-flex flex-column flex-lg-row p-3 p-lg-0 pe-lg-3">
-            <div class="col-12 col-lg-9 me-0 me-lg-3 card text-center mb-3 mb-lg-0">
-                <div class="card-header">
-                    <span>New message</span>
-                </div>
-                <div class="card-body">
-                    <p class="h5 card-title">Special treatment for you!</p>
-                    <span class="card-text border border-3 bg-light d-grid mb-3" style="place-content: center !important; height: 150px;">Some example ads here...</span>
-                    <a class="btn btn-success">Go somewhere</a>
-                    <a class="btn btn-outline-danger">Dismiss!</a>
-                </div>
-                <div class="card-footer">
-                    <p class="mb-0 text-muted">3 mins ago</p>
-                </div>
+        <main><div class="container-fluid d-flex flex-column flex-lg-row p-3 p-lg-0 pe-lg-3">
+    <!-- Class card for a basic card display -->
+    <div class="col-12 col-lg-8 me-0 me-lg-3 card mb-3 mb-lg-0">
+        <!-- Class card-header to make it a header. Noticed the grey bgcolor? -->
+        <div class="card-header text-center">
+            <span>New message</span>
+        </div>
+        <!-- This is the main body -->
+        <div class="card-body">
+            <!-- Class card-title for a margin-bottom(overrided by class h5 here) -->
+            <p class="h5 card-title">Special treatment for you!</p>
+            <div class="card-text border border-3 bg-light mb-3 d-block p-3">
+                <p class="mb-3">Some example ads here...</p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-6"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <!-- You can also add some color! -->
+                    <span class="card-text placeholder col-2 bg-warning"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-5"></span>
+                </p>
+                <p class="placeholder-glow mb-3 me-2 d-inline">
+                    <span class="card-text placeholder col-1 bg-danger"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-4"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-3 bg-success"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-5"></span>
+                </p>
+                <p class="placeholder-glow mb-1 me-2 d-inline">
+                    <span class="card-text placeholder col-4"></span>
+                </p>
+                <p class="placeholder-glow mb-3 me-2 d-inline">
+                    <span class="card-text placeholder col-3 bg-primary"></span>
+                </p>
+                <p class="placeholder-glow mb-3 me-2 d-inline">
+                    <span class="card-text placeholder col-2"></span>
+                </p>
             </div>
-            <div class="col-12 col-lg-3 card">
-                <div class="bg-secondary w-100 d-grid" style="height: 150px; place-content: center;">
-                    <span class="text-white">Placeholder Example</span>
-                </div>
-              
-                <div class="card-body">
-                    <h5 class="card-title placeholder-glow">
-                        <span class="placeholder col-6"></span>
-                    </h5>
-                    <p class="placeholder-glow mb-1 me-2 d-inline">
-                        <span class="card-text placeholder col-7"></span>
-                    </p>
-                    <p class="placeholder-glow mb-1 me-2 d-inline">
-                        <span class="card-text placeholder col-4"></span>
-                    </p>
-                    <p class="placeholder-glow mb-1 me-2 d-inline">
-                        <span class="card-text placeholder col-4"></span>
-                    </p>
-                    <p class="placeholder-glow mb-1 me-2 d-inline">
-                        <span class="card-text placeholder col-6"></span>
-                    </p>
-                    <p class="placeholder-glow mb-3 me-2 d-block">
-                        <span class="card-text placeholder col-8"></span>
-                    </p>
-                    <a href="#" tabindex="-1" class="btn btn-primary disabled placeholder col-6"></a>
-                </div>
+            <div class="d-flex">
+                <!-- I just love those loaders! -->
+                <!-- Spinner-grow or spinner-border(another -sm for size) -->
+                <a class="btn btn-outline-danger disabled placeholder"><div class="spinner-grow spinner-grow-sm me-1"></div>Loading... Here is a loader!</a>
+                <a class="btn btn-success ms-auto disabled placeholder"><div class="spinner-border spinner-border-sm me-1"></div>Loading... See the spinner?</a>
             </div>
         </div>
+        <!-- The footer -->
+        <div class="card-footer text-center">
+            <p class="mb-0 text-muted">3 mins ago</p>
+        </div>
+    </div>
+    <div class="col-12 col-lg-4 card">
+        <!-- This is the big rect. You can change it to an img and add class card-img-top for a border-top-radius -->
+        <div class="bg-secondary w-100 d-grid" style="height: 150px; place-content: center;">
+            <span class="text-white">Placeholder Image Example</span>
+        </div>
+        
+        <div class="card-body">
+            <!-- Class placeholder-glow for those stripes and animations(must be used on parent element) -->
+            <h5 class="card-title placeholder-glow">
+                <!-- col-* classes for width -->
+                <span class="placeholder col-6"></span>
+            </h5>
+            <!-- Must write like this or it won't work properly for me:( Try for your self for better solutions! -->
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-7"></span>
+            </p>
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-4"></span>
+            </p>
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-4"></span>
+            </p>
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-6"></span>
+            </p>
+            <p class="placeholder-glow mb-3 me-2 d-inline">
+                <span class="card-text placeholder col-8"></span>
+            </p>
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-4"></span>
+            </p>
+            <p class="placeholder-glow mb-1 me-2 d-inline">
+                <span class="card-text placeholder col-4"></span>
+            </p>
+            <!-- Set tabindex to -1 to make it unselectable by pressing TAB -->
+            <button href="#" tabindex="-1" class="btn btn-lg btn-primary disabled placeholder col-6 mt-3">Loading...</button>
+        </div>
+    </div>
+</div></main>
         <!-- Bootstrap Bundle with Popper -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     </body>
