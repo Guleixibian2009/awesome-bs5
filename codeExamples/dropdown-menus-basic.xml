@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<codeExample><div class="container-fluid">
-    <div class="d-flex flex-row flex-fill w-100">
-        <div class="container col-6 d-flex flex-row">
+<codeExample><div class="container-fluid p-0">
+    <div class="d-flex flex-column flex-lg-row flex-fill w-100">
+        <div class="container col-12 col-lg-6 d-flex flex-row">
             <!-- Class dropdown to make it a dropdown menu -->
-            <div class="dropdown ms-auto">
+            <div class="dropdown m-auto mb-5 ms-lg-auto mb-lg-0">
                 <!-- A button to control the menu. Must have class dropdown-toggle and "data-bs-toggle='dropdown'" -->
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown menu</button>
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">This is a basic dropdown</button>
                 <!-- Class dropdown-menu to make this <ul> a menu list -->
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item">Link1</a></li>
@@ -14,9 +14,9 @@
                 </ul>
             </div>
         </div>
-        <div class="container col-6">
-            <div class="dropdown">
-                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown menu#2</button>
+        <div class="container col-12 col-lg-6 d-flex flex-row">
+            <div class="dropdown m-auto mb-5 ms-lg-auto mb-lg-0">
+                <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">Click to open dropdown#2</button>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li><a class="dropdown-item">Link1</a></li>
                     <!-- Class active to make it seem like being clicked -->
