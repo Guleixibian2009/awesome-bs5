@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+        <title></title>
+    </head>
+    <body>
+        <main><div class="container-fluid p-0 d-flex flex-row px-5 justify-content-between">
+    <!-- Step 1: A basic square with 3/4 border -->
+    <span style="border-style: solid; border-width: .25em .25em .25em .25em; border-color: var(--bs-success); display: block; height: 36px; width: 36px;padding: 14px;border-right-color: transparent; display: inline-block;"></span>
+
+    <!-- Step 2: Give it a border-radius of 50% -->
+    <span style="border-style: solid; border-width: .25em .25em .25em .25em; border-color: var(--bs-success); display: block; height: 36px; width: 36px;padding: 14px;border-right-color: transparent; display: inline-block; border-radius: 50%;"></span>
+
+    <!-- Step 3: Add a spinning animation! -->
+    <style>
+        @keyframes spin{
+            from{
+                transform: rotate(0deg);
+            }
+
+            to{
+                transform: rotate(359deg);
+            }
+        }
+        .spinning{
+            animation: spin 0.5s linear infinite;
+        }
+    </style>
+    <span class="spinning" style="border-style: solid; border-width: .25em .25em .25em .25em; border-color: var(--bs-success); display: block; height: 36px; width: 36px;padding: 14px;border-right-color: transparent; display: inline-block; border-radius: 50%;"></span>
+
+    <!-- Step 4: Use it inside other elments! -->
+    <button class="btn btn-outline-primary p-2" style="height: 36px; width: 36px;">
+        <span class="spinning" style="border-style: solid; border-width: .2em .2em .2em .2em; display: block; padding: 7px;border-right-color: transparent; display: inline-block; border-radius: 50%;"></span>
+    </button>
+
+    <!-- Step 5: Compare it with Bootstrap's -->
+    <span class="spinner-border text-success"></span>
+    <!-- Oops, bit faster than the offical spinner -->
+</div></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

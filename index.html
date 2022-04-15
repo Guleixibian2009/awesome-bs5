@@ -190,13 +190,26 @@
                                 <p class="mb-3">You can also equip your dropdown menus with icons, search boxes and more.</p>
                             </div>
                         </div>
-                        <div id="bootstrap-card-and-placeholder">
-                            <h3>Bootstrap Cards and Placeholder</h3>
-                            <p>Interested in the name card above? That is achieved using <code>Card</code>. It looks like a mini window. It can be used for conveying additional info.</p>
-                            <div name="bootstrap-card-and-placeholder" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
-                            <p>The glowing stripes are placeholders. Read the code for basic usage!</p>
-                            <div class="code-load bg-light-rounded-3 border-3 shadow-lg mb-3" data-code-link="bootstrap-card-and-placeholder">
-                                <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                        <div id="bootstrap-card-placeholder-and-loader">
+                            <h3>Bootstrap Cards, Placeholders and loaders</h3>
+                            <div id="bootstrap-card-and-placeholder">
+                                <h4>Basic usage of them</h4>
+                                <p>Interested in the name card above? That is achieved using <code>Card</code>. It looks like a mini window. It can be used for conveying additional info.</p>
+                                <div name="bootstrap-card-and-placeholder" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
+                                <p>The glowing stripes are placeholders. Read the code for basic usage!</p>
+                                <div class="code-load bg-light-rounded-3 border-3 shadow-lg mb-3" data-code-link="bootstrap-card-and-placeholder">
+                                    <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                                </div>
+                            </div>
+                            <div id="reproduce-a-spinner">
+                                <h4>Can I reproduce a spinner without Bootstrap?</h4>
+                                <p>Yes, you definitely can! I looked through <code>Bootstrap</code>'s code and I found it very easy. It's just a bordered <code>span</code> with <code>border-radius</code> and sometimes color. At last, 
+                                just remember to give it an animation!</p>
+                                <div name="reproduce-a-spinner" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
+                                <p>Read the code for step-by-step tutorial!</p>
+                                <div class="code-load bg-light-rounded-3 border-3 shadow-lg mb-3" data-code-link="reproduce-a-spinner">
+                                    <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                                </div>
                             </div>
                         </div>
                         <div id="nav-breadcrumb">
@@ -290,6 +303,10 @@
             }
             h4{
                 position: sticky;
+            }
+
+            .token.comment{
+                color: var(--bs-gray-700) !important;
             }
         </style>
 
