@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+        <title>Basic Form Components</title>
+    </head>
+    <body>
+        <main><!-- I used <form> for reset button -->
+<form class="container-fluid p-0">
+    <!-- An unneccesary box for displaying -->
+    <div class="p-3 border border-3 bg-light mb-3">
+        <!-- Class form-check(for both checkbox and radio) for better displaying -->
+        <div class="form-check">
+            <!-- This is basic, really! -->
+            <!-- P.S. I'm using XHTML(in those examples for better XHR) so I must write like checked="checked" -->
+            <!-- You needn't write like that in HTML5 -->
+            <input type="checkbox" class="form-check-input" value="" checked="checked" id="form-check-checked-example"/>
+            <!-- <label> for it, bundled by the id -->
+            <label for="form-check-checked-example" class="form-check-label">Checked checkbox by default</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" value="" id="form-check-unchecked-example"/>
+            <label for="form-check-unchecked-example" class="form-check-label">Unchecked checkbox</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" value="" id="form-check-checked-disabled-example" checked="checked" disabled="disabled" />
+            <label for="form-check-checked-disabled-example" class="form-check-label">Disabled checked checkbox</label>
+        </div>
+        <div class="form-check">
+            <input type="checkbox" class="form-check-input" value="" id="form-check-unchecked-disabled-example" disabled="disabled" />
+            <label for="form-check-unchecked-disabled-example" class="form-check-label">Disabled unchecked checkbox</label>
+        </div>
+    </div>
+    <div class="p-3 border border-3 bg-light mb-3">
+        <!-- Use names to group them. -->
+        <!-- Pro Tip: Radios with the same name will be in one group -->
+        <!-- whether U R using Bootstrap or not and wherever they are(one can be very far away from others). -->
+        <div class="form-check">
+            <input type="radio" class="form-check-input" value="" name="form-radio" checked="checked" id="form-radio-checked-example"/>
+            <label for="form-radio-checked-example" class="form-check-label">Selected radio by default</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" value="" name="form-radio" id="form-radio-unchecked-example"/>
+            <label for="form-radio-unchecked-example" class="form-check-label">Unselcted radio</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" value="" name="form-radio-disabled" id="form-radio-checked-disabled-example" checked="checked" disabled="disabled" />
+            <label for="form-radio-checked-disabled-example" class="form-check-label">Disabled checked radio</label>
+        </div>
+        <div class="form-check">
+            <input type="radio" class="form-check-input" value="" name="form-radio-disabled" id="form-radio-unchecked-disabled-example" disabled="disabled" />
+            <label for="form-radio-unchecked-disabled-example" class="form-check-label">Disabled unchecked radio</label>
+        </div>
+    </div>
+    <div class="p-3 border border-3 bg-light mb-3">
+        <!-- You should add class form-check here too -->
+        <!-- Remenber to add class form-switch for switch rendering -->
+        <div class="form-check form-switch">
+            <!-- Still its type is checkbox so there will be a fallback -->
+            <!-- unneccesary role="switch" for switch performance -->
+            <input type="checkbox" class="form-check-input" value="" id="form-switch-checked-exmple" checked="checked" />
+            <label for="form-switch-checked-exmple">Checked switch by default</label>
+        </div>
+        <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" value="" id="form-switch-unchecked-exmple" />
+            <label for="form-switch-unchecked-exmple">Unchecked switch</label>
+        </div>
+        <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" value="" id="form-switch-disabled-checked-exmple" checked="checked" disabled="disabled" />
+            <label for="form-switch-disabled-checked-exmple">Disabled checked switch</label>
+        </div>
+        <div class="form-check form-switch">
+            <input type="checkbox" class="form-check-input" value="" id="form-switch-disabled-unchecked-exmple" disabled="disabled" />
+            <label for="form-switch-disabled-unchecked-exmple">Disabled unchecked switch</label>
+        </div>
+    </div>
+    <!-- type="reset" for reset buttons -->
+    <button type="reset" class="btn btn-outline-primary">Reset All</button>
+</form></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
