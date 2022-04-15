@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous" />
+
+        <title>Nav Breadcrumb</title>
+    </head>
+    <body>
+        <main><!-- Optional aria-label but better to add it -->
+<nav aria-label="breadcrumb">
+    <!-- Class bredcrumb to change a <ol> or <ul> into breadcrumbs -->
+    <ol class="breadcrumb">
+        <!-- Items of the breadcrumb -->
+        <!-- You don't need to add target="_self" if you don't use 
+        the <base target="_blank"> element in your <head> -->
+        <li class="breadcrumb-item"><a href="#home" target="_self">Home</a></li>
+        <li class="breadcrumb-item"><a href="#Now, the Awesome List!" target="_self">Awesome List</a></li>
+        <!-- The current directory -->
+        <li class="breadcrumb-item active"><a>Best for directories---<code>Breadcrumb</code></a></li>
+    </ol>
+</nav>
+<!-- Change var bs-breadcrumb-divider for your divider between items -->
+<nav aria-label="breadcrumb" style="--bs-breadcrumb-divider: '>';">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#home" target="_self">Home</a></li>
+        <li class="breadcrumb-item"><a href="#Now, the Awesome List!" target="_self">Awesome List</a></li>
+        <li class="breadcrumb-item"><a href="#dropdown-menus" target="_self">Dropdown Menus</a></li>
+        <li class="breadcrumb-item"><a href="#dropdown-menus-basic" target="_self">Dropdown Menus---Basic</a></li>
+    </ol>
+</nav>
+<span class="text-muted mb-0">P.S. Clickable links, but inside this page. Just click "&#8592;" on your browsers menu!</span></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -2,10 +2,6 @@
 "use strict";
 
 jQuery(function(){
-    $.ajaxSetup({
-        contentType: "text/html",
-        scriptCharset: "UTF-8"
-    })
     const CodeBlocks = document.getElementsByClassName("code-load");
     if (CodeBlocks != null){
         for (let i = 0; i < CodeBlocks.length; i++) {
