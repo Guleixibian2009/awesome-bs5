@@ -12,7 +12,7 @@ $(document).ready(function(){
         }
     }
     //Next turn them into <li> and give them correct classes
-    var OutputList = `<div class="sticky-top pt-2"><div class="heading d-grid" style="place-content: center !important;"><p class="h3 lead">Table Of Contents</p></div><ul id="TOC" class="list-unstyled">`
+    var OutputList = `<div class="sticky-top pt-2" id="TOCInner"><div class="heading d-grid" style="place-content: center !important;"><p class="h3 lead">Table Of Contents</p></div><div id="TOCMain" class="h-auto"><ul id="TOCList" class="list-unstyled TOCList">`
     var heading=0, subheading=0, subsubheading=0;
     HeadingList.forEach(el => {
         if (el.nodeName == "H2"){
@@ -36,9 +36,24 @@ $(document).ready(function(){
         var output = `<li class="${outputClass}"><button class="text-secondary btn btn-sm btn-outline-light p-1 border-0 rounded text-start">${outputNum}${el.innerHTML}</button></li>`
         OutputList = OutputList + output;
     });
-    OutputList = OutputList + `</ul></div>`;
+    OutputList = OutputList + `</ul><a href="https://github.com/guleixibian2009/awesome-bs5/" class="btn btn-lg btn-outline-warning w-100 mt-auto"><i class="bi bi-star-fill me-2"></i>Star me on GitHub!</a></div></div>`;
     //Finally output!
     $("nav#TOC").html(OutputList);
+
+    //On resize...
+    function setHeight(){
+        var windowHeight = document.documentElement.clientHeight;
+        var TOCInner = document.querySelector("div#TOCInner").getElementsByTagName("ul")[0];
+        $(TOCInner).css("height", eval(windowHeight - 40 - 80));
+        $(TOCInner).css("overflow", "auto");
+        console.log(TOCInner.clientHeight);
+    }
+
+    setHeight();
+
+    $(window).resize(function(){
+        setHeight();
+    });
 
 
     //First highlight the first <li> by giving it an extra class
