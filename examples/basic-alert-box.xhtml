@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+        <title>Basic alert box</title>
+    </head>
+    <body>
+        <main><div class="d-flex flex-column flex-fill" id="basic-alert-box-display">
+    <!-- Class alert to make it a basic alert -->
+    <!-- Use class alert-* for the colors -->
+    <div class="alert alert-primary">
+        <p class="mb-0">Oh yeah you have successflly read this <strong>primary</strong> alert message!</p>
+    </div>
+    <div class="alert alert-warning">
+        <p class="mb-0">Oh yeah you have successflly read this <strong>warning</strong> alert message with an <a class="alert-link">Example Link</a>!</p>
+    </div>
+    <div class="alert alert-danger">
+        <i class="bi bi-exclamation-triangle-fill me-2"></i><p class="mb-0 d-inline-block">Oh yeah you have successflly read this <strong>danger</strong> alert message with an <a class="alert-link">Example Link</a>!</p>
+    </div>
+    <!-- Class alert-dismissable for dismissable alerts -->
+    <div class="alert alert-info alert-dismissible">
+        <i class="bi bi-info-circle-fill me-2"></i><p class="mb-0 d-inline-block">Oh yeah you have successflly read this <strong>info</strong> alert message that you can <strong>dismiss</strong> with an <a class="alert-link">Example Link</a>!</p>
+        <!-- Remember to add a close button! Don't forget the class "btn-close" and data-bs-dismiss="alert" -->
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <!-- Classes fade and show for animation when dismissed(only through the dismiss button inside the alert) -->
+    <div class="alert alert-secondary alert-dismissible fade show">
+        <!-- Class alert-heading for some CSS -->
+        <p class="h3 alert-heading">Exmaple <strong>secondary</strong> alert with a heading</p>
+        <p>Lorem ipsum...</p>
+        <hr />
+        <p>This is quite like a <code>Jumbotron</code>, but just like I said, they're for different porpuses. 
+        You can dismiss it after you have read this! Dismissing meanings completely delete its <code>HTML</code> from the page and there's no turning back.</p>
+        <p class="mb-0">Note: This alert box will <strong>fade</strong> out before destroyed.</p>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+</div>
+<button type="button" class="btn btn-primary" id="dismiss-all" aria-label="Close">Dismiss them all!</button>
+<!-- My own class code-load-js for the loader -->
+<script class="code-load-js">
+    /*I must write CDATA in XHTML, just omit CDATA in your own script!*/
+    document.getElementById("dismiss-all").onclick = function(){
+        /*Get all alerts*/
+        const alerts = document.querySelectorAll(".alert");
+        //<![CDATA[
+        for (let i = 0; i < alerts.length; i++) {
+            /*Can't use Bootstrap's code here, I wrote my own that does the same thing to the DOM*/
+            const alert = alerts[i];
+            alert.remove();
+        }
+        document.getElementById("dismiss-all").remove();
+        $("div#basic-alert-box-display").html('<p class="mb-0">Refresh this page for those dismissed alerts!</p>');
+        //]]>
+    };
+</script></main>
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

@@ -12,7 +12,7 @@ $(document).ready(function(){
         }
     }
     //Next turn them into <li> and give them correct classes
-    var OutputList = `<div class="sticky-top pt-2" id="TOCInner"><div class="heading d-grid" style="place-content: center !important;"><p class="h3 lead">Table Of Contents</p></div><div id="TOCMain" class="h-auto"><ul id="TOCList" class="list-unstyled TOCList">`
+    var OutputList = `<div class="sticky-top pt-2" id="TOCInner"><div class="heading d-grid" style="place-content: center !important;"><p class="h3 lead">Table Of Contents</p></div><div id="TOCMain"><ul id="TOCList" class="list-unstyled">`
     var heading=0, subheading=0, subsubheading=0;
     HeadingList.forEach(el => {
         if (el.nodeName == "H2"){
@@ -46,7 +46,6 @@ $(document).ready(function(){
         var TOCInner = document.querySelector("div#TOCInner").getElementsByTagName("ul")[0];
         $(TOCInner).css("height", eval(windowHeight - 40 - 80));
         $(TOCInner).css("overflow", "auto");
-        console.log(TOCInner.clientHeight);
     }
 
     setHeight();
