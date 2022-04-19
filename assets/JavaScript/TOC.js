@@ -77,7 +77,7 @@ $(document).ready(function(){
 
     //When clicked, get the id and it's YOffSet
     $("nav#TOC li").click(function(){
-        var raw = $(this).text().replace(/\d.\d.\d\s/,"").replace(/\d.\d\s/,"").replace(/\d.\s/,"");
+        var raw = $(this).text().replace(/\d.\d\d.\d\s/,"").replace(/\d.\d\d\s/,"").replace(/\d.\d.\d\s/,"").replace(/\d.\d\s/,"").replace(/\d.\s/,"");
         var heading = document.getElementById(raw);
         var headingY = heading.offsetTop;
         //Use jQuery.scrollTo to create a linear animation
