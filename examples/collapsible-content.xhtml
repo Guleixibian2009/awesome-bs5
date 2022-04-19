@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Collapsible Content</title>
+    </head>
+    <body>
+        <main><div class="btn-group d-flex flex-column flex-sm-row">
+    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsible1">Toggle Collapsible Content#1</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsible2">Toggle Collapsible Content#2</button>
+    <button type="button" class="btn btn-outline-success" data-bs-toggle="collapse" data-bs-target=".collapsible">Toggle Collapsible Content#1&amp;2</button>
+</div>
+<div class="d-flex flex-column flex-md-row flex-fill align-items-stretch mt-3">
+    <div id="collapsible1" class="col-12 col-md-6 rounded-3 border border-1 bg-light text-black collapse collapsible">
+        <div class="p-3">
+            <p class="h5">This is example collapsible box#1.</p>
+            <p>lorem ipsum...</p>
+        </div>
+    </div> 
+    <div id="collapsible2" class="col-12 col-md-6 rounded-3 border border-1 bg-light text-black collapse collapsible ms-auto">
+        <div class="p-3">
+            <p class="h5">This is example collapsible box#2.</p>
+            <p>lorem ipsum...</p>
+        </div>
+    </div> 
+</div>
+<p class="mb-0 mt-3">Here are some text that will move with those collapsibles.</p></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
