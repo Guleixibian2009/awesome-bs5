@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Basic Modal Boxes</title>
+    </head>
+    <body>
+        <main><!-- The main control group -->
+<div id="modal-basic-controls" class="btn-group d-flex flex-column flex-sm-row">
+    <!-- Add data-bs-toggle="modal" and data-bs-target -->
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-basic">Launch demo modal#1</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-fade">Launch demo modal#2</button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-backdrop">Launch demo modal#3</button>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal-full">Launch demo modal#4</button>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-scroll">Launch demo modal#5</button>
+</div>
+<!-- First add class modal -->
+<div class="modal" id="modal-basic" tabindex="-1">
+    <!-- The inner part of the modal: class modal-dialog -->
+    <div class="modal-dialog">
+        <!-- Class modal-content for some CSS -->
+        <div class="modal-content">
+            <!-- Just like cards -->
+            <div class="modal-header">
+                <p class="modal-title">This is a basic modal</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>This is a basic popup modal. It can convey some super important info.</p>
+                <p>Lorem ipsum...</p>
+                <p class="mb-0">Click the close button on the top-right, the bottom or outside the modal. You can also press <kbd>Esc</kbd> to close it!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary">Got it!</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Class fade for animation -->
+<div class="modal fade" id="modal-fade" tabindex="-1">
+    <!-- Class modal-dialog-centered for placing -->
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Basic modal with animation!</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Like this loading animation? Add class <code>fade</code> to your modal.</p>
+                <p>Lorem ipsum...</p>
+                <p class="mb-0">Did you notice that this one is completely aligned in the center? I added class <code>modal-dialog-centered</code> for this effect. Everything else is just like the original modal#1.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary">Got it!</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Don't forget data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modal-backdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Modal with static backdrop</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Try close me by clicking outside, ha! Ow yes you can't close me by doing that, nor can you by pressing <kbd>Esc</kbd> because I added 
+                <code class="language-html">data-bs-backdrop="static" data-bs-keyboard="false"</code></p>
+                <p>Lorem ipsum...</p>
+                <p class="mb-0">Click the close button on the top-right or the bottom to close me.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary">Got it!</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-full" tabindex="-1">
+    <!-- Class modal-fullscreen for fullscreen modals -->
+    <div class="modal-dialog modal-fullscreen">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Fullscreen Modal Example</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal is fullscreen. </p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p class="mb-0">Click the close button on the top-right or the bottom to close me. You can't get access to any other parts of the page now.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary">Got it!</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-scroll" tabindex="-1">
+    <!-- Class modal-dialog-scrollable when modal too short or content too long -->
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Scrollable modal</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal has content that is too long for the modal, so the modal is now scrollable. I just used some <code>&lt;br&gt;s</code>.</p>
+                <p>Lorem ipsum...</p>
+                <!-- So many brs here... -->
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <p class="mb-0">That's it. Click the close button on the top-right or the bottom to close me.</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary">Got it!</button>
+                <button class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
