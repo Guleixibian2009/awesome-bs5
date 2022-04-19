@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Modal Basic Controls</title>
+    </head>
+    <body>
+        <main><div id="modal-basic-controls" class="btn-group d-flex flex-column flex-md-row">
+    <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#modal-full">Launch demo modal#fullscreen</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-sm">Launch demo modal#small</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#modal-md">Launch demo modal#medium</button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-lg">Launch demo modal#large</button>
+    <button type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#modal-xl">Launch demo modal#x-large</button>
+    <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modal-xxl">Launch demo modal#xx-large</button>
+</div>
+<!-- Six modals. Class modal-fullscreen-*-down for the sizes. Resize the screen to try them! -->
+<div class="modal fade" id="modal-full" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - always fullscreen</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will always be fullscreen.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-sm" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-sm-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - fullscreen under small</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will be fullscreen when narrower than small.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-md" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-md-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - fullscreen under medium</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will be fullscreen when narrower than medium.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-lg" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-lg-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - fullscreen under large</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will be fullscreen when narrower under large.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-xl" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-xl-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - fullscreen under x-large</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will be fullscreen when narrower under x-large.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-xxl" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen-xxl-down modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <p class="modal-title">Demo modal - fullscreen under xx-large</p>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>This modal will be fullscreen under xx-large.</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+                <p>Lorem ipsum...</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-primary">Got it!</button>
+                <button type="button" class="btn btn-success" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
