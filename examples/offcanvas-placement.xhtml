@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Offcanvas Placement</title>
+    </head>
+    <body>
+        <main><!-- A control group -->
+<div class="btn-group d-flex flex-column flex-sm-row">
+    <button type="button" class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-left">Toggle offcanvas left</button>
+    <button type="button" class="btn btn-success" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-right">Toggle offcanvas right</button>
+    <button type="button" class="btn btn-warning" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-top">Toggle offcanvas top</button>
+    <button type="button" class="btn btn-danger" data-bs-toggle="offcanvas" data-bs-target="#offcanvas-bottom">Toggle offcanvas bottom</button>
+</div>
+<!-- Class offcanvas for offcanvas display -->
+<!-- Class offcanvas-* for placement -->
+<div class="offcanvas offcanvas-start" id="offcanvas-left">
+    <!-- The header -->
+    <div class="offcanvas-header">
+        <p class="h5">Basic Offcanvas</p>
+        <!-- A close button -->
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <!-- The main body -->
+    <div class="offcanvas-body">
+        <p>Lorem ipsum...</p>
+        <button type="button" class="btn btn-secondary">Example</button>
+    </div>
+</div>
+<div class="offcanvas offcanvas-end" id="offcanvas-right">
+    <div class="offcanvas-header">
+        <p class="h5">Basic Offcanvas</p>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Lorem ipsum...</p>
+        <button type="button" class="btn btn-secondary">Example</button>
+    </div>
+</div>
+<div class="offcanvas offcanvas-top" id="offcanvas-top">
+    <div class="offcanvas-header">
+        <p class="h5">Basic Offcanvas</p>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Lorem ipsum...</p>
+        <button type="button" class="btn btn-secondary">Example</button>
+    </div>
+</div>
+<div class="offcanvas offcanvas-bottom" id="offcanvas-bottom">
+    <div class="offcanvas-header">
+        <p class="h5">Basic Offcanvas</p>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p>Lorem ipsum...</p>
+        <button type="button" class="btn btn-secondary">Example</button>
+    </div>
+</div></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
