@@ -48,16 +48,23 @@
 </div>
 <button type="button" class="btn btn-primary" id="dismiss-all" aria-label="Close">Dismiss them all!</button>
 <!-- My own class code-load-js for the loader -->
-<script class="code-load-js">
+<!-- Must write type="module" for Bootstrap's behavior -->
+<script class="code-load-js" type="module">
+    /*Init all alerts*/
+    /*Code from offcial site! Just copy-paste*/
+    var alertList = document.querySelectorAll('.alert');
+    var alerts =  [].slice.call(alertList).map(function (element) {
+        return new bootstrap.Alert(element);
+    })
+
     /*I must write CDATA in XHTML, just omit CDATA in your own script!*/
     document.getElementById("dismiss-all").onclick = function(){
         /*Get all alerts*/
         const alerts = document.querySelectorAll(".alert");
         //<![CDATA[
-        for (let i = 0; i < alerts.length; i++) {
-            /*Can't use Bootstrap's code here, I wrote my own that does the same thing to the DOM*/
-            const alert = alerts[i];
-            alert.remove();
+        for (const alertNode of alerts) {
+            const alert = bootstrap.Alert.getInstance(alertNode);
+            alert.close();
         }
         document.getElementById("dismiss-all").remove();
         $("div#basic-alert-box-display").html('<p class="mb-0">Refresh this page for those dismissed alerts!</p>');

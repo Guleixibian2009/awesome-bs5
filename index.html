@@ -297,8 +297,6 @@
                             </div>
                         </div>
                         <div id="collapsible-content">
-                            <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_collapse.asp -->
-                            <!-- https://getbootstrap.com/docs/5.1/components/collapse/ -->
                             <h3>Collapsing your content!</h3>
                             <p>Too much content to show on the page which made you annoyed? Or only showing something when neccessary? Just collape those additional content! 
                             Add a button(or button like thing) as a trigger. Then add some <code>data-bs-*</code> attributes. Then it's OK!</p>
@@ -310,9 +308,20 @@
                             </div>
                             <p>The last <code class="language-html">&lt;p&gt;</code> will go half way up then be pushed back down when you first fire only one collapsible content then click button#3 to toggle them both.</p>
                         </div>
-                        <div id="tooltips-with-script">
+                        <div id="tooltips-with-js">
                             <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_tooltip.asp -->
                             <!-- https://getbootstrap.com/docs/5.1/components/tooltips/ -->
+                            <h3>Tooltips(with JavaScript)</h3>
+                            <p>Want to convey some additional info on a certain piece of text? Then try <code>Tooltips</code>. They appear when users hover on their "parent" elements.</p>
+                            <div id="basic-tooltips">
+                                <h4>Basic Tooltips</h4>
+                                <div name="basic-tooltips" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
+                                <p>Kinda complex this time because we must init all tooltips by JavaScript manually. Bootstrap won't pre-init them for performance reasons.</p>
+                                <p class="text-primary">Pro Tip: Add <code class="language-html">type="module"</code> on <code>&lt;script&gt;s</code> if you're using inline script(in case your browser doesn't recognize <code>bootstrap</code>).</p>
+                                <div class="code-load bg-light-rounded-3 border-3 shadow-lg mb-3" data-code-link="basic-tooltips">
+                                    <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                                </div>
+                            </div>
                         </div>
                         <div id="offcanvas-sidebar">
                             <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_offcanvas.asp -->

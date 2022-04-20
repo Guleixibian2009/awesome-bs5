@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Tooltips with JS</title>
+    </head>
+    <body>
+        <main><!-- Add neccesary data-bs-*. You can choose "top"/"bottom"/"left"/"right" for placement. -->
+<!-- Place your content in the title. -->
+<p class="mb-0">
+    Here is an example 
+    <strong data-bs-toggle="tooltip" data-bs-placement="top" title="Here is a tooltip on the top">tooltip</strong>. 
+    <strong data-bs-toggle="tooltip" data-bs-placement="bottom" title="This one is on the bottom">Another one here</strong> 
+    too. You can also place tooltips on 
+    <a href="" data-bs-toggle="tooltip" data-bs-placement="right" title="Another one on the right">links</a> 
+    or <button class="btn btn-primary" data-bs-toggle="tooltip" data-bs-placement="left" title="On the left this time">buttons</button> .
+</p>
+<!-- Must write type="module" for Bootstrap's behavior -->
+<script class="code-load-js" type="module">
+    /*Init all Tooltips*/
+    /*Code from offical site! Just copy-paste*/
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
