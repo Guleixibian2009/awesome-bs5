@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Tooltip Status</title>
+    </head>
+    <body>
+        <main><p>
+    Here are some 
+    <strong data-bs-toggle="tooltip" data-bs-placement="top" title="This is tooltip#1" id="tooltip1">Tooltips</strong>. 
+    Another <strong data-bs-toggle="tooltip" data-bs-placement="bottom" title="This is tooltip#2" id="tooltip2">one</strong> here.
+</p>
+<div class="btn-group d-flex flex-column flex-sm-row">
+    <!-- See Switch, Checks and Radios for more info about inputs and labels -->
+    <input type="checkbox" class="btn-check" id="toggle1" autocomplete="off" />
+    <label type="button" class="btn btn-outline-primary" onclick="window.onToggle1Click()" for="toggle1">Toggle tooltip1</label>
+    <input type="checkbox" class="btn-check" id="toggle2" autocomplete="off" />
+    <label type="button" class="btn btn-outline-primary" onclick="window.onToggle2Click()" for="toggle2">Toggle tooltip2</label>
+    <input type="checkbox" class="btn-check" id="show1" autocomplete="off" />
+    <label type="button" class="btn btn-outline-success" onclick="window.onShow1Click()" for="show1">Show/Hide tooltip1</label>
+    <input type="checkbox" class="btn-check" id="show2" autocomplete="off" />
+    <label type="button" class="btn btn-outline-success" onclick="window.onShow2Click()" for="show2">Show/Hide tooltip2</label>
+</div>
+<!-- Remember to add type="module"! -->
+<script class="code-load-js" type="module">
+    /*Init all tooltips*/
+    /*Just copy-paste*/
+    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+    var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl)
+    });
+
+    /*Get those tooltips' instances(not the elements themselves)*/
+    const tooltip1 = bootstrap.Tooltip.getInstance(document.getElementById("tooltip1"));
+    const tooltip2 = bootstrap.Tooltip.getInstance(document.getElementById("tooltip2"));
+
+    /* See https://getbootstrap.com/docs/5.1/components/tooltips/ for more info. */
+    window.onToggle1Click = function (){
+        tooltip1.toggleEnabled();
+    }
+
+    window.onToggle2Click = function (){
+        tooltip2.toggleEnabled();
+    }
+
+    window.onShow1Click = function (){
+        tooltip1.toggle();
+    }
+
+    window.onShow2Click = function (){
+        tooltip2.toggle();
+    }
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
