@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Offcanvas Backdrop</title>
+    </head>
+    <body>
+        <main><div class="btn-group d-flex flex-column flex-sm-row">
+    <!-- You can also use links with href to toggle offcanvas -->
+    <a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvas-variable">Open offcanvas</a>
+    <input type="radio" class="btn-check" id="toggle-backdrop-on" autocomplete="off" name="toggle-backdrop" checked="checked" />
+    <label onclick="window.onBackdropOn()" class="btn btn-outline-primary" for="toggle-backdrop-on">Backdrop On</label>
+    <input type="radio" class="btn-check" id="toggle-backdrop-off" autocomplete="off" name="toggle-backdrop" />
+    <label onclick="window.onBackdropOff()" class="btn btn-outline-primary" for="toggle-backdrop-off">Backdrop Off</label>
+    <input type="radio" class="btn-check" id="toggle-scroll-on" autocomplete="off" name="toggle-scroll" checked="checked" />
+    <label onclick="window.onScrollOn()" class="btn btn-outline-success" for="toggle-scroll-on">Scroll On</label>
+    <input type="radio" class="btn-check" id="toggle-scroll-off" autocomplete="off" name="toggle-scroll" />
+    <label onclick="window.onScrollOff()" class="btn btn-outline-success" for="toggle-scroll-off">Scroll Off</label>
+</div>
+
+<div class="offcanvas offcanvas-start" id="offcanvas-variable" data-bs-scroll="true" data-bs-backdrop="true">
+    <div class="offcanvas-header">
+        <p class="h5">Basic Offcanvas</p>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <p class="text-primary">Tip: If you toggled backdrop false, then you must click the close button to close me.</p>
+        <p>Lorem ipsum...</p>
+        <button type="button" class="btn btn-secondary">Example</button>
+    </div>
+</div>
+
+<!-- type="module" for Bootstrap's behavior -->
+<script class="code-load-js" type="module">
+    const offcanvasVar = document.getElementById("offcanvas-variable");
+    var ifBackdrop = true, ifScroll = true;
+
+    function setVars(backdrop, scroll) {
+        offcanvasVar.setAttribute("data-bs-scroll", scroll);
+        offcanvasVar.setAttribute("data-bs-backdrop", backdrop);
+        /*(Re-)Init the offcanvas for variables*/
+        /*Copy-Paste!*/
+        var offcanvasElementList = [].slice.call(document.querySelectorAll('.offcanvas'))
+        var offcanvasList = offcanvasElementList.map(function (offcanvasEl) {
+            return new bootstrap.Offcanvas(offcanvasEl)
+        });
+    }
+
+    /*Init offcanvas*/
+    setVars(ifBackdrop, ifScroll);
+    
+    /*Some onclick functions*/
+    window.onBackdropOn = function() {
+        ifBackdrop = true;
+        setVars(ifBackdrop, ifScroll);
+    }
+    window.onBackdropOff = function() {
+        ifBackdrop = false;
+        setVars(ifBackdrop, ifScroll);
+    }
+    window.onScrollOn = function() {
+        ifScroll = true;
+        setVars(ifBackdrop, ifScroll);
+    }
+    window.onScrollOff = function() {
+        ifScroll = false;
+        setVars(ifBackdrop, ifScroll);
+    }
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
