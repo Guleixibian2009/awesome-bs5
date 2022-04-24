@@ -364,8 +364,14 @@
                             </div>
                         </div>
                         <div id="nav-scrollspy">
-                            <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_scrollspy.asp -->
-                            <!-- https://getbootstrap.com/docs/5.1/components/scrollspy/ -->
+                            <h3>Scrollspy Navbars</h3>
+                            <p>Being tired of writing too much <code>JavaScript</code> to build a sidebar? Just use a scrollspy. You just need to add all the headings to a <code>list-group</code> or a <code>&lt;nav&gt;</code>. Scrollspy will handle the scrolling and highlighting.</p>
+                            <p class="text-primary">P.S. You must set the scrolling element's height(or it won't become a scrolling element, right?).</p>
+                            <div name="nav-scrollspy" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
+                            <p>Great news: No initing this time! Just add <code>data-bs-spy</code> and <code>data-bs-target</code>.(But you still need to init when you add a outside scrollspy to the page. That's what I'm doing.)</p>
+                            <div class="code-load bg-light border-3 shadow-lg mb-3" data-code-link="nav-scrollspy">
+                                <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                            </div>
                         </div>
                     </article>
                     <article id="complex">
@@ -393,7 +399,7 @@
         <footer class="container-fluid py-3 border-top bg-dark">
             <div class="container-xl">
                 <div>
-                    <p class="text-muted mb-1">&copy;2022 Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/guleixibian2009/">@Guleixibian2009</a></p>
+                    <p class="text-muted mb-0">&copy;2022 Made with <i class="bi bi-heart-fill text-danger"></i> by <a href="https://github.com/guleixibian2009/">@Guleixibian2009</a>. This project is under the <strong>GPL-3.0</strong> License.</p>
                 </div>
             </div>
         </footer>
@@ -423,10 +429,6 @@
                 counter-increment: subsubheading;
                 content: counter(heading) "." counter(subheading) "." counter(subsubheading) " ";
                 color: rgb(var(--bs-secondary-rgb));
-            }
-
-            code.language-html span.token.comment{
-                color: var(--bs-gray-700) !important;
             }
         </style>
 

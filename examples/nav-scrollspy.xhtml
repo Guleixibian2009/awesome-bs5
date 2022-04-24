@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Scrollspy Navbar</title>
+    </head>
+    <body>
+        <main><div class="container-fluid p-0">
+    <!-- A basic nav here -->
+    <nav id="scrollspy-nav" class="navbar navbar-light bg-white px-3 d-flex mb-3">
+        <a class="navbar-brand">Navbar</a>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <!-- No target="_self" if you don't use the "base target='_blank'" element -->
+                <a class="nav-link" href="#scrollspy-1" target="_self">H1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#scrollspy-2" target="_self">H2</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Dropdown</a>
+                <ul class="dropdown-menu dropdown-menu-start" style="min-width: 140px !important;">
+                    <li><a class="dropdown-item" href="#scrollspy-3" target="_self">Heading 3</a></li>
+                    <li><a class="dropdown-item" href="#scrollspy-4" target="_self">Heading 4</a></li>
+                    <li><hr class="dropdown-divider" /></li>
+                    <li><a class="dropdown-item" href="#scrollspy-5" target="_self">Heading 5</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</div>
+<!-- data-bs-*(spy, target and offset) -->
+<!-- Must set height and overflow; Remember to add a position: relative; for better perfomance -->
+<div id="scrollspy-example" data-bs-spy="scroll" data-bs-target="#scrollspy-nav" data-bs-offset="50" tabindex="0" style="overflow: auto; height: 400px; position: relative;">
+    <p class="text-primary">This example is from the official site.</p>
+    <p class="h4" id="scrollspy-1">First heading</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p class="h4" id="scrollspy-2">Second heading</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p class="h4" id="scrollspy-3">Third heading</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p class="h4" id="scrollspy-4">Fourth heading</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+    <p class="h4" id="scrollspy-5">Fifth heading</p>
+    <p>Lorem ipsum...</p>
+    <p>Lorem ipsum...</p>
+</div>
+<!-- Refreshing(Initing) the scrollspy -->
+<script class="code-load-js" type="module">
+    var scrollSpyContentEl = document.getElementById('scrollspy-example');
+    /*Actually creating an instance by doing this*/
+    var scrollSpy = bootstrap.ScrollSpy.getOrCreateInstance(scrollSpyContentEl);
+    /*Refresh!*/
+    scrollSpy.refresh();
+
+    /*On resize, re-init the scrollspy*/
+    document.onresize = function(){
+        scrollSpy.refresh();
+    }
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
