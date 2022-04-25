@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Popup Toasts</title>
+    </head>
+    <body>
+        <main><div class="btn-group d-flex flex-column flex-sm-row">
+    <button type="button" class="btn btn-outline-primary" id="toast-show-all">Show Toasts!</button>
+    <button type="button" class="btn btn-primary" id="toast-show-1">Reveal Toast#1!</button>
+    <button type="button" class="btn btn-primary" id="toast-show-2">Reveal Toast#2!</button>
+    <button type="button" class="btn btn-primary" id="toast-show-3">Reveal Toast#3!</button>
+    <button type="button" class="btn btn-primary" id="toast-show-4">Reveal Toast#4!</button>
+    <button type="button" class="btn btn-primary" id="toast-show-5">Reveal Toast#5!</button>
+</div>
+<!-- Toast wrapper -->
+<!-- position-fixed + bottom/end/start/top for placements -->
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 10000;">
+    <!-- The toast -->
+    <div class="toast" name="toast-example" id="toast-1">
+        <!-- Really like card, right! -->
+        <div class="toast-header">
+            <!-- Placeholder img -->
+            <span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <!-- Close button -->
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>Hello, world! This is a toast message.</span>
+        </div>
+    </div>
+</div>
+<div class="position-fixed top-0 end-0 p-3" style="z-index: 10000;">
+    <div class="toast" name="toast-example" id="toast-2">
+        <div class="toast-header">
+            <span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>Hello, world! This is a toast message.</span>
+        </div>
+    </div>
+</div>
+<div class="position-fixed top-0 start-0 p-3" style="z-index: 10000;">
+    <div class="toast" name="toast-example" id="toast-3">
+        <div class="toast-header">
+            <span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>Hello, world! This is a toast message.</span>
+        </div>
+    </div>
+</div>
+<div class="position-fixed bottom-0 start-0 p-3" style="z-index: 10000;">
+    <div class="toast" name="toast-example" id="toast-4">
+        <div class="toast-header">
+            <span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>Hello, world! This is a toast message.</span>
+        </div>
+    </div>
+</div>
+<div class="position-fixed top-50 start-50 translate-middle p-3" style="z-index: 10000;">
+    <div class="toast" name="toast-example" id="toast-5">
+        <div class="toast-header">
+            <span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span>
+            <strong class="me-auto">Bootstrap</strong>
+            <small>11 mins ago</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            <span>Hello, world! This is a toast message.</span>
+        </div>
+    </div>
+</div>
+<script class="code-load-js" type="module">
+    /*First init all toasts(that's necessary!)*/
+    const toastExamples = document.getElementsByName("toast-example");
+    for (const toastNode of toastExamples) {
+        const toast = bootstrap.Toast.getOrCreateInstance(toastNode);
+    }
+
+    document.getElementById("toast-show-all").onclick = function(){
+        for (const toastNode of document.getElementsByName("toast-example")) {
+            var Toast = new bootstrap.Toast(toastNode);
+            /*Function show to reveal it*/
+            Toast.show();
+        }
+    }
+    document.getElementById("toast-show-1").onclick = function(){
+        var toast1 = new bootstrap.Toast(document.getElementById("toast-1"));
+        toast1.show();
+    }
+    document.getElementById("toast-show-2").onclick = function(){
+        var toast2 = new bootstrap.Toast(document.getElementById("toast-2"));
+        toast2.show();
+    }
+    document.getElementById("toast-show-3").onclick = function(){
+        var toast3 = new bootstrap.Toast(document.getElementById("toast-3"));
+        toast3.show();
+    }
+    document.getElementById("toast-show-4").onclick = function(){
+        var toast4 = new bootstrap.Toast(document.getElementById("toast-4"));
+        toast4.show();
+    }
+    document.getElementById("toast-show-5").onclick = function(){
+        var toast5 = new bootstrap.Toast(document.getElementById("toast-5"));
+        toast5.show();
+    }
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>

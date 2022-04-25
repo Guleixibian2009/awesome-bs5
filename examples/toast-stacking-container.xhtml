@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8"></meta>
+        <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+
+        <!-- Bootstrap CSS -->
+        <link href="../node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="../node_modules/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+
+        <title>Toast Stacking and Containers</title>
+    </head>
+    <body>
+        <main><button class="btn btn-primary" id="random-toast">Create a toast randomly!</button>
+<!-- Class toast-container for extra margin between alerts -->
+<div class="toast-container toast-container-example position-fixed top-0 start-0 p-3" style="z-index: 10010;" id="toast-container-1"></div>
+<div class="toast-container toast-container-example position-fixed top-0 end-0 p-3" style="z-index: 10010;" id="toast-container-2"></div>
+<div class="toast-container toast-container-example position-fixed bottom-0 start-0 p-3" style="z-index: 10010;" id="toast-container-3"></div>
+<div class="toast-container toast-container-example position-fixed bottom-0 end-0 p-3" style="z-index: 10010;" id="toast-container-4"></div>
+<script class="code-load-js" type="module">
+    //<![CDATA[
+    var id = 0;
+    const containerNodes = document.getElementsByClassName("toast-container-example");
+    window.randomToastOnClick = function(id){
+        /*A basic toast*/
+        var toastHTML = `<div class="toast" name="toast-example" id="toast-random-${id}" data-bs-animation="true" data-bs-autohide="false"><div class="toast-header"><span class="rounded me-2 bg-primary" style="height: 2em; width: 2em;"></span><strong class="me-auto">Bootstrap</strong><small>11 mins ago</small><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div><div class="toast-body"><span>Hello, world! This is a toast message.</span></div></div>`;
+        /*Random number between 0-3*/
+        var random = Math.round(Math.random()*3);
+        var targetContainer = containerNodes[random];
+        targetContainer.innerHTML = toastHTML + targetContainer.innerHTML;
+        /*Init the toast*/
+        var newToast = new bootstrap.Toast(document.getElementById(`toast-random-${id}`));
+        /*Show the toast*/
+        newToast.show();
+        window.setTimeout(function(){
+            newToast.hide();
+            /*Clear the old toast's space*/
+            document.getElementById(`toast-random-${id}`).style.display = "none";
+        },3000)
+    }
+    document.getElementById("random-toast").onclick = function(){
+        id++;
+        /*Outer functions so we won't mess up the ids*/
+        window.randomToastOnClick(id);
+    }
+    //]]>
+</script></main>
+        <!-- Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
