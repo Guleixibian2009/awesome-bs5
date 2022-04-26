@@ -87,4 +87,26 @@ $(document).ready(function(){
     $("nav#TOC p.h3").click(function(){
         $.scrollTo(0,200);
     });
+
+    //On scroll, get the scrollPercent
+    const navBar = document.getElementById("TOC").getElementsByTagName("ul")[0];
+    function GetScrollY() {
+        return document.documentElement.scrollTop || window.pageYOffset || document.body.scrollTop;
+    }
+
+    //What we need: CurrentScrollY
+    function GetPercentage(){
+        var NavHeight = navBar.clientHeight;
+        var BodyHeight = $(document).height();
+        var CurrentWindowHeight = $(window).height();
+        //Modern browser || Safari || IE
+        var ScrollY = GetScrollY();
+        var percentage = (ScrollY / (BodyHeight - CurrentWindowHeight)) * 1.08 * NavHeight;
+        return percentage;
+    }
+
+    $(window).on("scroll", function(){
+        var percentage = GetPercentage();
+        navBar.scrollTo(0, percentage);
+    });
 });
