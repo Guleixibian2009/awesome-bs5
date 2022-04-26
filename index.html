@@ -415,8 +415,15 @@
                             </div>
                         </div>
                         <div id="accordion">
-                            <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_collapse.asp -->
-                            <!-- https://getbootstrap.com/docs/5.1/components/accordion/ -->
+                            <h3>Accordions---Cards and Collapsing</h3>
+                            <p>Not interested in nav tabs? Then try building an accordion. They are like cards but stacked.</p>
+                            <div id="accordion-basic">
+                                <h4>Live Example!</h4>
+                                <div name="accordion-basic" class="mb-3 p-3 border border-1 bg-light rounded-3"></div>
+                                <div class="code-load bg-light border-3 shadow-lg mb-3" data-code-link="accordion-basic">
+                                    <pre class="mb-0 mt-0 bg-light"><code class="language-html"></code></pre>
+                                </div>
+                            </div>
                         </div>
                         <div id="form-complex">
                             <!-- https://www.w3school.com.cn/bootstrap5/bootstrap_forms.asp -->
@@ -460,6 +467,57 @@
                 counter-increment: subsubheading;
                 content: counter(heading) "." counter(subheading) "." counter(subsubheading) " ";
                 color: rgb(var(--bs-secondary-rgb));
+            }
+
+            @media screen and (max-width: 576px) {
+                div.btn-group.flex-sm-row > .btn:first-child, 
+                div.btn-group.flex-sm-row > .btn:last-child{
+                    border-radius: 0 !important;
+                }
+
+                div.btn-group.flex-sm-row > .btn:first-child, 
+                div.btn-group.flex-sm-row > label.btn:nth-child(2){
+                    margin-left: -1px;
+                }
+
+                div.btn-group.flex-sm-row > label.btn:nth-child(2), 
+                div.btn-group.flex-sm-row > label.btn:last-child{
+                    border-radius: 0 !important;
+                }
+            }
+
+            @media screen and (max-width: 768px) {
+                div.btn-group.flex-md-row > .btn:first-child, 
+                div.btn-group.flex-md-row > .btn:last-child{
+                    border-radius: 0 !important;
+                }
+
+                div.btn-group.flex-md-row > .btn:first-child, 
+                div.btn-group.flex-md-row > label.btn:nth-child(2){
+                    margin-left: -1px;
+                }
+
+                div.btn-group.flex-md-row > label.btn:nth-child(2), 
+                div.btn-group.flex-md-row > label.btn:last-child{
+                    border-radius: 0 !important;
+                }
+            }
+
+            @media screen and (max-width: 996px) {
+                div.btn-group.flex-lg-row > .btn:first-child, 
+                div.btn-group.flex-lg-row > .btn:last-child{
+                    border-radius: 0 !important;
+                }
+
+                div.btn-group.flex-lg-row > .btn:first-child, 
+                div.btn-group.flex-lg-row > label.btn:nth-child(2){
+                    margin-left: -1px;
+                }
+
+                div.btn-group.flex-lg-row > label.btn:nth-child(2), 
+                div.btn-group.flex-lg-row > label.btn:last-child{
+                    border-radius: 0 !important;
+                }
             }
         </style>
 
